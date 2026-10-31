@@ -17,4 +17,11 @@
 .sim-result .split{flex-wrap:wrap}
 .sim-result .split>div{flex:1 1 130px;min-width:0;max-width:100%}
 .sim-result .split strong{overflow-wrap:anywhere}
+/* Give every summary metric its own full-width row, including on iPhone. */
+.stats-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+.stats-grid .stat-card{width:100%;min-width:0;max-width:100%;padding:22px}
+.stats-grid .stat-title{font-size:12px;line-height:1.5;min-height:0;margin-bottom:12px}
+.stats-grid .stat-value{min-width:0;max-width:100%;font-size:32px;line-height:1.2;white-space:normal;overflow-wrap:anywhere}
+.stats-grid .stat-note{font-size:11px;line-height:1.6;margin-top:8px}
+@media(max-width:760px){.stats-grid .stat-card{padding:20px}.stats-grid .stat-value{font-size:28px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
