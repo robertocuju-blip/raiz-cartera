@@ -11,7 +11,7 @@ Cada dispositivo empieza vacío. La cartera de ejemplo es ficticia y no modifica
 ## Funciones y cálculos
 
 - Aportaciones fechadas con notas e historial editable.
-- Valoraciones manuales del valor total de la cartera al cierre del día.
+- Una única valoración manual del valor total de la cartera al cierre del día; cada actualización sustituye a la anterior.
 - Ganancia: valoración menos aportaciones hasta esa fecha, inclusive.
 - Rentabilidad total: ganancia / aportaciones. No considera el tiempo invertido de cada importe.
 - Anualizada: TIR.NO.PER/XIRR, ponderada por dinero y fechas, días reales / 365. Sin datos suficientes o solución válida se muestra «—».
@@ -19,7 +19,9 @@ Cada dispositivo empieza vacío. La cartera de ejemplo es ficticia y no modifica
 - Copias JSON para exportar e importar todos los registros y el escenario guardado.
 - Uso sin conexión tras la primera descarga completa de los recursos.
 
-Las aportaciones posteriores a la última valoración quedan pendientes del siguiente cierre. El gráfico muestra aportaciones acumuladas y valoraciones reales, sin inventar precios históricos. Esta versión admite entradas de dinero, sin retiradas. El simulador no ajusta inflación ni impuestos; utiliza una tasa neta de gastos para reflejarlos.
+Las aportaciones posteriores a la última valoración quedan pendientes del siguiente cierre. El gráfico muestra aportaciones acumuladas y la última valoración, sin histórico de valoraciones ni precios pasados inventados. Al abrir una cartera antigua se conserva solo la valoración más reciente y se mantienen todas las aportaciones. Esta versión admite entradas de dinero, sin retiradas. El simulador no ajusta inflación ni impuestos; utiliza una tasa neta de gastos para reflejarlos.
+
+Los campos numéricos aceptan coma o punto decimal, sin separadores de miles. Los importes de dinero admiten hasta dos decimales; las tasas del simulador, hasta ocho. Los campos de fecha y sus contenedores se ajustan a pantallas pequeñas, incluidos los controles nativos de Safari.
 
 ## Publicación y desarrollo
 

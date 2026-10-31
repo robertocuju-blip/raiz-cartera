@@ -7,4 +7,14 @@
 #toast{opacity:0;visibility:hidden}#toast.show{opacity:1;visibility:visible}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:760px){.chart text{font-size:17px}.sim-save{margin-top:14px;width:100%}}
+/* Keep native iOS date controls and form contents inside their grid/flex cell. */
+.sim-layout,.sim-layout>*,#simulation-form,.sim-layout .field,.sim-layout .input-suffix{min-width:0;min-inline-size:0;max-width:100%;max-inline-size:100%}
+.sim-layout>*,#simulation-form,.sim-layout .field,.sim-layout .input-suffix{width:100%}
+.sim-layout .field input,.sim-layout .field select{display:block;box-sizing:border-box;width:100%;inline-size:100%;min-width:0;min-inline-size:0;max-width:100%;max-inline-size:100%}
+.sim-layout input[type="date"]{appearance:none;-webkit-appearance:none;text-align:left}
+.sim-layout input[type="date"]::-webkit-date-and-time-value{min-width:0;min-inline-size:0;text-align:left}
+.sim-result .result-value{max-width:100%;overflow-wrap:anywhere;line-height:1.15}
+.sim-result .split{flex-wrap:wrap}
+.sim-result .split>div{flex:1 1 130px;min-width:0;max-width:100%}
+.sim-result .split strong{overflow-wrap:anywhere}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
